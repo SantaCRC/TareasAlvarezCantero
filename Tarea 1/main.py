@@ -3,27 +3,28 @@ def string_work(string):
     Convierte minusculas en mayusculas y viceversa
     """
     new_string = ""
-    if isinstance(string, str): #Vefifica que sea una cadena de texto
-        if string.isalpha(): #verifica que solo contenga letras
-            for i in range(len(string)): #recorre la cadena de texto
-                if string[i].islower(): #verifica que sea minuscula
-                    new_string+= string[i].upper() #convierte a mayuscula
-                else: #si no es minuscula
-                    new_string+= string[i].lower() #convierte a minuscula
-            return new_string #retorna la cadena de texto convertida
-        else: #si no es una cadena de texto
-            return 2 #retorna codigo de error 2
-    else: #si es tipo string
-        return 1 #retorna codigo de error 1
+    if isinstance(string, str):  # Vefifica que sea una cadena de texto
+        if string.isalpha():  # verifica que solo contenga letras
+            for i in range(len(string)):  # recorre la cadena de texto
+                if string[i].islower():  # verifica que sea minuscula
+                    new_string += string[i].upper()  # convierte a mayuscula
+                else:  # si no es minuscula
+                    new_string += string[i].lower()  # convierte a minuscula
+            return new_string  # retorna la cadena de texto convertida
+        else:    # si no es una cadena de texto
+            return 2  # retorna codigo de error 2
+    else:  # si es tipo string
+        return 1  # retorna codigo de error 1
+
 
 def num_to_str(num):
     """
     Convierte un numero a texto
     """
-    if isinstance(num, int): # Verifica que sea un numero entero
-        if num > 0 and num<100: # Verifica que sea un numero entre 0 y 99
-            if num == 1:  
-                return "Uno" 
+    if isinstance(num, int):  # Verifica que sea un numero entero
+        if num > 0 and num < 100:  # Verifica que sea un numero entre 0 y 99
+            if num == 1:
+                return "Uno"
             elif num == 2:
                 return "Dos"
             elif num == 3:
@@ -95,11 +96,12 @@ def num_to_str(num):
             elif num == 90:
                 return "Noventa"
             else:
-                decenas=num//10 # Obtiene las decenas
-                unidades=num%10 # Obtiene las unidades
+                decenas = num // 10  # Obtiene las decenas
+                unidades = num % 10  # Obtiene las unidades
                 if decenas == 3:
-                    return "Treinta_y_"+num_to_str(unidades)  # utiliza la funcion num_to_str para convertir las unidades utilizando recusividad
-                elif decenas == 4: 
+                    return "Treinta_y_"+num_to_str(unidades)
+                    # num_to_str(unidades) retorna las unidades en texto
+                elif decenas == 4:
                     return "Cuarenta_y_"+num_to_str(unidades)
                 elif decenas == 5:
                     return "Cincuenta_y_"+num_to_str(unidades)
@@ -111,7 +113,7 @@ def num_to_str(num):
                     return "Ochenta_y_"+num_to_str(unidades)
                 elif decenas == 9:
                     return "Noventa_y_"+num_to_str(unidades)
-        else: # Si no es un numero entre 0 y 99
-            return 3 # Retorna codigo de error 3
-    else: # Si no es un numero entero o es negativo
-        return 4 # Retorna codigo de error 4
+        else:  # Si no es un numero entre 0 y 99
+            return 3  # Retorna codigo de error 3
+    else:  # Si no es un numero entero o es negativo
+        return 4  # Retorna codigo de error 4
