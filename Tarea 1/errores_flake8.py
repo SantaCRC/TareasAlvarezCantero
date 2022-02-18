@@ -1,5 +1,7 @@
-from main import *   # Este import tiene el error por el *
+from main import string_work   # corregido
 
-def main():  # tiene error de espaciado entre el def y el resto del codigo
+
+def main():  # corregido
     print("Hola mundo")
-    print("Esta linea es mas larga de lo recomenado por flake8")  # Esta linea es mas larga de lo recomenado por flake8
+    string_work("Hola mundo")
+    print("Esta linea es mas larga de lo recomenado por flake8")  # Corregido
