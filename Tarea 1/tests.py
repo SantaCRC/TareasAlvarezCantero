@@ -1,4 +1,6 @@
 from main import string_work, num_to_str
+# ERR5 -3 En test_num_to_str_num no se verifica la respuesta.
+# No basta con verificar que sea solo un string
 
 
 def test_str_work_mayus_a_minus():
